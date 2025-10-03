@@ -99,15 +99,12 @@ const Hero = () => {
               </div>
               
               {/* Decorative Line */}
-              <div className="mt-4 mx-auto w-32 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full animate-pulse"></div>
             </div>
 
             {/* Enhanced Description */}
             <div className="relative glass p-8 rounded-3xl border border-white/10 backdrop-blur-xl animate-slide-up max-w-5xl mx-auto" style={{animationDelay: '0.5s'}}>
               <p className="text-xl md:text-2xl text-slate-300 leading-relaxed">
-                Hi, I'm <span className="gradient-text font-semibold">Junaid Mollah</span>, a <span className="text-accent-400 font-semibold">Blockchain Developer</span> currently pursuing a B.Tech in Computer Science Engineering. I have hands-on experience in building 
-                <span className="text-primary-400 font-semibold"> decentralized applications (dApps)</span>, designing <span className="text-accent-400 font-semibold">Ethereum smart contracts using Solidity</span>, and implementing <span className="text-purple-400 font-semibold">DAO systems</span>. Alongside blockchain, I am skilled in 
-                <span className="text-primary-400 font-semibold"> full-stack web development with React.js, Node.js, and Express.js</span>. I have actively participated in multiple hackathons and worked on impactful projects that showcase my ability to develop innovative and secure blockchain-based solutions.
+                Hi, I'm <span className="gradient-text font-bold">Junaid Mollah</span>, a <span className="text-emerald-400 font-semibold">Blockchain Developer</span> currently pursuing B.Tech in Computer Science Engineering. I have hands-on experience in building <span className="text-cyan-400 font-semibold">decentralized applications (dApps)</span>, designing <span className="text-emerald-400 font-semibold">Ethereum smart contracts using Solidity</span>, and implementing DAO systems. Alongside blockchain, I am skilled in <span className="text-blue-400 font-semibold">full-stack web development with React.js, Node.js, and Express.js</span>. I have actively participated in multiple hackathons and worked on impactful projects that showcase my ability to develop innovative and secure blockchain-based solutions.
               </p>
             </div>
           </div>

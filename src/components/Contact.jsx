@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Mail, Phone, Send, Github, Linkedin, Twitter, Sparkles, Star, MessageCircle, User, AtSign } from 'lucide-react'
+import { Mail, Phone, Send, Github, Linkedin, X, Sparkles, Star, MessageCircle, User, AtSign } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,15 +33,15 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'junaidmollah@example.com',
+      value: 'junaidmollah17@gmail.com',
       link: '#',
       color: 'from-red-500 to-pink-600',
       glowColor: 'shadow-red-500/50'
     },
     {
       icon: Phone,
-      title: 'Phone (Optional)',
-      value: '+91 XXXXX XXXXX',
+      title: 'Phone',
+      value: '+91 7679911680',
       link: '#',
       color: 'from-green-500 to-emerald-600',
       glowColor: 'shadow-green-500/50'
@@ -66,12 +66,12 @@ const Contact = () => {
       hoverColor: 'hover:shadow-blue-500/50'
     },
     {
-      icon: Twitter,
-      name: 'Twitter / X',
+      icon: X,
+      name: 'X',
       url: '#',
-      color: 'from-slate-700 to-black',
+      color: 'from-slate-800 to-black',
       glowColor: 'shadow-slate-700/50',
-      hoverColor: 'hover:shadow-slate-500/50'
+      hoverColor: 'hover:shadow-white/30'
     }
   ]
 
@@ -147,14 +147,28 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Let's start a conversation
-              </h3>
-              <p className="text-slate-300 mb-8 leading-relaxed">
-                I'm always interested in new opportunities, interesting projects, 
-                and great people to work with. Whether you have a question or just 
-                want to say hi, feel free to reach out!
-              </p>
+              <div className="mb-8">
+                <h3 className="text-4xl md:text-5xl font-black mb-4 text-center">
+                  <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-2xl">
+                    Let's Start a Conversation
+                  </span>
+                </h3>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="w-12 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full animate-pulse"></div>
+                  <MessageCircle className="w-6 h-6 text-cyan-400 animate-bounce" />
+                  <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse"></div>
+                </div>
+              </div>
+              <div className="relative glass rounded-2xl border border-white/10 backdrop-blur-xl p-6 mb-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-accent-500/5 to-purple-500/5 rounded-2xl"></div>
+                <p className="relative text-lg text-slate-200 leading-relaxed font-medium">
+                  🚀 <span className="text-accent-400 font-bold">Ready to innovate?</span> I'm passionate about collaborating on <span className="text-primary-400 font-semibold">cutting-edge blockchain projects</span> and <span className="text-emerald-400 font-semibold">revolutionary web solutions</span>. 
+                  <br /><br />
+                  💡 Whether you're looking to <span className="text-cyan-400 font-semibold">build the next big dApp</span>, need a <span className="text-purple-400 font-semibold">full-stack development partner</span>, or simply want to discuss about technology - I'm here for it!
+                  <br /><br />
+                  ✨ <span className="text-yellow-400 font-bold">Let's create something extraordinary together!</span>
+                </p>
+              </div>
             </div>
 
             {/* Contact Details */}
@@ -195,7 +209,14 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="mt-12">
-              <h4 className="text-2xl font-bold gradient-text mb-8 text-center">Connect With Me</h4>
+              <div className="text-center mb-8">
+                <h4 className="text-3xl font-black mb-4">
+                  <span className="bg-gradient-to-r from-primary-400 via-accent-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
+                    Connect With Me
+                  </span>
+                </h4>
+                <div className="mx-auto w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full animate-pulse"></div>
+              </div>
               <div className="grid grid-cols-3 gap-4">
                 {socialLinks.map((social, index) => (
                   <div
@@ -203,17 +224,27 @@ const Contact = () => {
                     className="group relative perspective-1000 animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className={`relative transform-gpu transition-all duration-700 hover:scale-110 hover:-translate-y-3 ${social.glowColor} ${social.hoverColor} hover:shadow-2xl`}>
-                      <div className="relative glass rounded-[1.5rem] border border-white/20 overflow-hidden backdrop-blur-xl p-6">
-                        <div className={`absolute inset-0 bg-gradient-to-br ${social.color} opacity-5 group-hover:opacity-15 transition-opacity duration-700`}></div>
+                    <div className={`relative transform-gpu transition-all duration-700 hover:scale-125 hover:-translate-y-4 ${social.glowColor} ${social.hoverColor} hover:shadow-2xl`}>
+                      <div className="relative glass rounded-[2rem] border-2 border-white/30 overflow-hidden backdrop-blur-xl p-8 group-hover:border-white/60">
+                        {/* Enhanced Background Gradient */}
+                        <div className={`absolute inset-0 bg-gradient-to-br ${social.color} opacity-10 group-hover:opacity-25 transition-opacity duration-700`}></div>
+                        
+                        {/* Animated Border Glow */}
+                        <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{
+                          background: `linear-gradient(45deg, transparent 30%, ${social.name === 'GitHub' ? 'rgba(107, 114, 128, 0.3)' : social.name === 'LinkedIn' ? 'rgba(59, 130, 246, 0.3)' : 'rgba(255, 255, 255, 0.3)'} 50%, transparent 70%)`,
+                          filter: 'blur(1px)'
+                        }}></div>
                         
                         <div className="relative z-10 text-center">
-                          <div className={`inline-flex p-4 bg-gradient-to-br ${social.color} rounded-[1rem] shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 mb-3`}>
-                            <social.icon className="w-6 h-6 text-white drop-shadow-lg" />
+                          <div className={`inline-flex p-5 bg-gradient-to-br ${social.color} rounded-[1.5rem] shadow-2xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 mb-4`}>
+                            <social.icon className="w-8 h-8 text-white drop-shadow-lg" />
                           </div>
-                          <p className="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors duration-300">
+                          <p className="text-lg font-bold text-slate-300 group-hover:text-white transition-colors duration-300">
                             {social.name}
                           </p>
+                          
+                          {/* Decorative Line */}
+                          <div className={`mt-3 mx-auto w-8 h-1 bg-gradient-to-r ${social.color} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
                         </div>
                       </div>
                     </div>
@@ -269,7 +300,7 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           className="w-full px-6 py-4 bg-slate-800/50 border-2 border-white/20 rounded-[1rem] text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 group-hover/input:border-white/40 transition-all duration-300"
-                          placeholder="your.email@example.com"
+                          placeholder="yourname@gmail.com"
                         />
                       </div>
                     </div>
