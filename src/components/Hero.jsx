@@ -121,20 +121,22 @@ const Hero = () => {
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-accent-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <span className="relative flex items-center space-x-3 text-lg">
+              <span className="relative flex items-center space-x-3">
                 <Sparkles className="w-6 h-6 group-hover:rotate-180 transition-transform duration-500" />
                 <span>View My Work</span>
                 <ChevronDown className="w-6 h-6 group-hover:translate-y-2 group-hover:animate-bounce transition-all duration-300" />
               </span>
             </button>
-            
-            <button className="group relative px-10 py-5 glass rounded-2xl font-bold text-white border-2 border-white/30 hover:border-white/60 backdrop-blur-xl hover:bg-white/10 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-              {/* Animated Border */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+            <button className="group relative px-8 py-4 glass rounded-2xl font-bold text-white border-2 border-white/30 hover:border-primary-400/80 backdrop-blur-xl hover:bg-gradient-to-r hover:from-primary-500/20 hover:via-accent-500/20 hover:to-purple-500/20 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden active:bg-gradient-to-r active:from-primary-500 active:via-accent-500 active:to-purple-500 active:border-accent-400 active:shadow-2xl active:shadow-primary-500/50">
+              {/* Colorful Click Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 via-accent-400 to-purple-500 opacity-0 group-hover:opacity-30 group-active:opacity-100 transition-all duration-300 blur-sm"></div>
               
-              <span className="relative flex items-center space-x-3 text-lg">
-                <Download className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                <span>Download CV</span>
+              {/* Rainbow Ripple Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-red-400 via-yellow-400 via-green-400 via-blue-400 via-indigo-400 to-purple-400 opacity-0 group-active:opacity-50 rounded-2xl transition-all duration-500 animate-pulse"></div>
+              
+              <span className="relative flex items-center space-x-3 group-active:text-white group-active:drop-shadow-lg">
+                <Download className="w-6 h-6 group-hover:animate-bounce group-active:animate-spin group-active:text-yellow-300 transition-all duration-300" />
+                <span className="group-active:bg-gradient-to-r group-active:from-yellow-300 group-active:via-pink-300 group-active:to-purple-300 group-active:bg-clip-text group-active:text-transparent transition-all duration-300">Download Resume</span>
               </span>
             </button>
           </div>
