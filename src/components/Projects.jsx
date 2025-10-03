@@ -13,8 +13,8 @@ const Projects = () => {
       color: 'from-purple-500 to-indigo-600',
       glowColor: 'shadow-purple-500/50',
       icon: Shield,
-      demoUrl: '#',
-      codeUrl: '#'
+      demoUrl: 'https://youtu.be/vwNu7Up3RdQ',
+      codeUrl: 'https://github.com/JunaidCD/Credence'
     },
     {
       title: 'FinBridge – Decentralized Peer-to-Peer Lending Platform',
@@ -23,8 +23,8 @@ const Projects = () => {
       color: 'from-green-500 to-emerald-500',
       glowColor: 'shadow-green-500/50',
       icon: Zap,
-      demoUrl: '#',
-      codeUrl: '#'
+      demoUrl: 'https://youtu.be/VwHelavo0Ws',
+      codeUrl: 'https://github.com/JunaidCD/FinBridge'
     },
     {
       title: 'Dappazon – Decentralized E-Commerce Platform',
@@ -33,8 +33,8 @@ const Projects = () => {
       color: 'from-blue-500 to-cyan-500',
       glowColor: 'shadow-blue-500/50',
       icon: Globe,
-      demoUrl: '#',
-      codeUrl: '#'
+      demoUrl: 'https://youtu.be/Lkze7fc2L20',
+      codeUrl: 'https://github.com/JunaidCD/D-App'
     }
   ]
 
@@ -46,8 +46,8 @@ const Projects = () => {
       color: 'from-emerald-500 to-teal-600',
       glowColor: 'shadow-emerald-500/50',
       icon: Leaf,
-      demoUrl: '#',
-      codeUrl: '#'
+      demoUrl: 'https://youtu.be/36btDaE4zek',
+      codeUrl: 'https://github.com/JunaidCD/Ayurherb-2.0'
     },
     {
       title: 'AQUILA – AI Marine Research Platform',
@@ -56,8 +56,8 @@ const Projects = () => {
       color: 'from-blue-600 to-indigo-700',
       glowColor: 'shadow-blue-600/50',
       icon: Brain,
-      demoUrl: '#',
-      codeUrl: '#'
+      demoUrl: 'https://youtu.be/Uv3eMENloH4',
+      codeUrl: 'https://github.com/Meghali54/Aquilia_AI'
     },
     {
       title: 'CivicEye – Blockchain Property Monitoring System',
@@ -67,7 +67,7 @@ const Projects = () => {
       glowColor: 'shadow-amber-500/50',
       icon: Eye,
       demoUrl: '#',
-      codeUrl: '#'
+      codeUrl: 'https://github.com/JunaidCD/CivicEye3.0'
     },
     {
       title: 'ProofChain – Decentralized Credential Verification',
@@ -77,7 +77,7 @@ const Projects = () => {
       glowColor: 'shadow-violet-500/50',
       icon: Award,
       demoUrl: '#',
-      codeUrl: '#'
+      codeUrl: 'https://github.com/JunaidCD/Chainsure'
     },
     {
       title: 'SpaceDAO – Decentralized Space Mission Governance',
@@ -87,7 +87,7 @@ const Projects = () => {
       glowColor: 'shadow-slate-600/50',
       icon: Rocket,
       demoUrl: '#',
-      codeUrl: '#'
+      codeUrl: 'https://github.com/JunaidCD/SpaceDao2.0'
     },
     {
       title: 'Event Management Platform',
@@ -97,7 +97,7 @@ const Projects = () => {
       glowColor: 'shadow-pink-500/50',
       icon: Calendar,
       demoUrl: '#',
-      codeUrl: '#'
+      codeUrl: 'https://github.com/JunaidCD/React.js'
     }
   ]
 
@@ -321,7 +321,15 @@ const Projects = () => {
 
                       {/* Action Buttons */}
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <button className="group/btn relative px-8 py-4 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.25rem] font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
+                        <button 
+                          onClick={() => {
+                            if (project.demoUrl === '#') {
+                              alert('Video will be Available soon');
+                            } else {
+                              window.open(project.demoUrl, '_blank');
+                            }
+                          }}
+                          className="group/btn relative px-8 py-4 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.25rem] font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
                           {/* Button Glow Effect */}
                           <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></div>
                           
@@ -331,7 +339,9 @@ const Projects = () => {
                           </span>
                         </button>
                         
-                        <button className="group/btn relative px-8 py-4 glass rounded-[1.25rem] font-bold text-white border-2 border-white/30 hover:border-white/60 backdrop-blur-xl hover:bg-white/10 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
+                        <button 
+                          onClick={() => window.open(project.codeUrl, '_blank')}
+                          className="group/btn relative px-8 py-4 glass rounded-[1.25rem] font-bold text-white border-2 border-white/30 hover:border-white/60 backdrop-blur-xl hover:bg-white/10 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
                           <span className="relative flex items-center justify-center space-x-3">
                             <Github className="w-6 h-6 group-hover/btn:rotate-12 transition-transform duration-300" />
                             <span>Code</span>
@@ -474,7 +484,15 @@ const Projects = () => {
 
                       {/* Action Buttons */}
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <button className="group/btn relative px-8 py-4 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.25rem] font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
+                        <button 
+                          onClick={() => {
+                            if (project.demoUrl === '#') {
+                              alert('Video will be Available soon');
+                            } else {
+                              window.open(project.demoUrl, '_blank');
+                            }
+                          }}
+                          className="group/btn relative px-8 py-4 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.25rem] font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
                           {/* Button Glow Effect */}
                           <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></div>
                           
@@ -484,7 +502,9 @@ const Projects = () => {
                           </span>
                         </button>
                         
-                        <button className="group/btn relative px-8 py-4 glass rounded-[1.25rem] font-bold text-white border-2 border-white/30 hover:border-white/60 backdrop-blur-xl hover:bg-white/10 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
+                        <button 
+                          onClick={() => window.open(project.codeUrl, '_blank')}
+                          className="group/btn relative px-8 py-4 glass rounded-[1.25rem] font-bold text-white border-2 border-white/30 hover:border-white/60 backdrop-blur-xl hover:bg-white/10 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex-1">
                           <span className="relative flex items-center justify-center space-x-3">
                             <Github className="w-6 h-6 group-hover/btn:rotate-12 transition-transform duration-300" />
                             <span>Code</span>
