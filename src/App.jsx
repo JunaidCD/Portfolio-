@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Achievements from './components/Achievements'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -15,6 +16,8 @@ function App() {
         return <Skills />
       case 'projects':
         return <Projects />
+      case 'achievements':
+        return <Achievements />
       default:
         return <Hero />
     }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, Home, User, Code, Briefcase, Mail } from 'lucide-react'
+import { Home, Code, Briefcase, Menu, X, Trophy } from 'lucide-react'
 
 const Navbar = ({ currentPage, setCurrentPage }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,6 +17,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
     { name: 'About me', page: 'home', icon: Home },
     { name: 'My Skills', page: 'skills', icon: Code },
     { name: 'My Projects', page: 'projects', icon: Briefcase },
+    { name: 'Achievements', page: 'achievements', icon: Trophy },
   ]
 
   const handleNavClick = (page) => {
