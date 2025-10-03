@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Home, Code, Briefcase, Menu, X, Trophy } from 'lucide-react'
+import { Home, Code, Briefcase, Menu, X, Trophy, MessageCircle } from 'lucide-react'
 
 const Navbar = ({ currentPage, setCurrentPage }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +18,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
     { name: 'My Skills', page: 'skills', icon: Code },
     { name: 'My Projects', page: 'projects', icon: Briefcase },
     { name: 'Achievements', page: 'achievements', icon: Trophy },
+    { name: 'Contact Me', page: 'contact', icon: MessageCircle },
   ]
 
   const handleNavClick = (page) => {
@@ -31,12 +32,12 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
       scrolled ? 'glass border-b border-white/10' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button 
               onClick={() => handleNavClick('home')}
-              className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+              className="text-3xl md:text-4xl font-black gradient-text hover:scale-105 transition-transform duration-300 drop-shadow-lg"
             >
               My Portfolio
             </button>

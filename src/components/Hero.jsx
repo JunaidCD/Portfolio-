@@ -4,7 +4,7 @@ import { ChevronDown, Github, Linkedin, Mail, Download, Sparkles, Code, Zap } fr
 const Hero = () => {
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-32">
       {/* Advanced Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Mesh Background */}
@@ -113,7 +113,7 @@ const Hero = () => {
           </div>
 
           {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up" style={{animationDelay: '0.7s'}}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up mb-16" style={{animationDelay: '0.7s'}}>
             <button className="group relative px-10 py-5 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-2xl font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
               {/* Button Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
@@ -142,7 +142,7 @@ const Hero = () => {
           </div>
 
           {/* Enhanced Social Links */}
-          <div className="flex justify-center space-x-8 animate-slide-up" style={{animationDelay: '0.9s'}}>
+          <div className="flex justify-center space-x-8 animate-slide-up mt-4 mb-32" style={{animationDelay: '0.9s'}}>
             {[
               { icon: Github, href: '#', label: 'GitHub', color: 'hover:bg-gray-600' },
               { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:bg-blue-600' },
