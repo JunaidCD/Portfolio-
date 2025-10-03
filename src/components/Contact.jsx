@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Mail, Phone, Send, Github, Linkedin, X, Sparkles, Star, MessageCircle, User, AtSign } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Contact = () => {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('')
 
   const handleChange = (e) => {
     setFormData({
@@ -17,16 +19,80 @@ const Contact = () => {
     })
   }
 
+  const validateForm = () => {
+    const { name, email, subject, message } = formData
+    
+    if (!name.trim()) {
+      alert('Please enter your name')
+      return false
+    }
+    
+    if (!email.trim()) {
+      alert('Please enter your email')
+      return false
+    }
+    
+    if (!email.includes('@') || !email.includes('.')) {
+      alert('Please enter a valid email address')
+      return false
+    }
+    
+    if (!subject.trim()) {
+      alert('Please enter a subject')
+      return false
+    }
+    
+    if (!message.trim()) {
+      alert('Please enter your message')
+      return false
+    }
+    
+    return true
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setIsSubmitting(true)
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    // Validate all fields are filled
+    if (!validateForm()) {
+      return
+    }
+    
+    setIsSubmitting(true)
+    setSubmitStatus('')
+    
+    try {
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      
+      // Check if EmailJS is configured
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please set up your EmailJS credentials.')
+      }
+      
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'junaidmollah17@gmail.com' // Your email where you want to receive messages
+      }
+      
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      
+      setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
-      alert('Message sent successfully!')
-    }, 2000)
+      alert('✅ Message sent successfully! I\'ll get back to you soon.')
+      
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      setSubmitStatus('error')
+      alert('❌ Failed to send message. Please try again or contact me directly at junaidmollah17@gmail.com')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
