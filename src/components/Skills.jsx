@@ -307,7 +307,7 @@ const Skills = () => {
             {/* 3D CTA Container */}
             <div className="relative transform-gpu transition-all duration-700 hover:rotateY-6 hover:scale-105 hover:-translate-y-4">
               {/* Main CTA Card */}
-              <div className="relative glass p-12 rounded-4xl border border-white/20 overflow-hidden backdrop-blur-xl max-w-5xl mx-auto">
+              <div className="relative glass p-12 rounded-[2rem] border border-white/20 overflow-hidden backdrop-blur-xl max-w-5xl mx-auto">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 overflow-hidden">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-10 blur-3xl group-hover:scale-150 group-hover:opacity-20 transition-all duration-1000"></div>
@@ -355,7 +355,7 @@ const Skills = () => {
 
                   {/* Enhanced Button */}
                   <div className="relative">
-                    <button className="group/btn relative px-12 py-6 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-3xl font-bold text-white text-xl shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-3 transition-all duration-500 overflow-hidden">
+                    <button className="group/btn relative px-12 py-6 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.5rem] font-bold text-white text-xl shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-3 transition-all duration-500 overflow-hidden">
                       {/* Button Glow Effects */}
                       <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></div>
                       <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
@@ -368,7 +368,7 @@ const Skills = () => {
                       </span>
 
                       {/* Button Shimmer */}
-                      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover/btn:opacity-60 transition-opacity duration-700" style={{
+                      <div className="absolute inset-0 rounded-[1.5rem] opacity-0 group-hover/btn:opacity-60 transition-opacity duration-700" style={{
                         background: 'linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%)',
                         transform: 'translateX(-100%)',
                         animation: 'shimmer 2s ease-in-out infinite'
@@ -376,18 +376,18 @@ const Skills = () => {
                     </button>
 
                     {/* Button Ring Effect */}
-                    <div className="absolute inset-0 border-2 border-dashed border-primary-400/30 rounded-3xl opacity-0 group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-180 transition-all duration-1000 pointer-events-none"></div>
+                    <div className="absolute inset-0 border-2 border-dashed border-primary-400/30 rounded-[1.5rem] opacity-0 group-hover:opacity-100 group-hover:scale-125 group-hover:rotate-180 transition-all duration-1000 pointer-events-none"></div>
                   </div>
                 </div>
 
                 {/* Card Border Glow */}
-                <div className="absolute inset-0 rounded-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{
+                <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{
                   background: 'linear-gradient(45deg, transparent 30%, rgba(34, 197, 94, 0.2) 50%, transparent 70%)',
                   filter: 'blur(2px)'
                 }}></div>
 
                 {/* Holographic Effect */}
-                <div className="absolute inset-0 rounded-4xl opacity-0 group-hover:opacity-30 transition-opacity duration-700" style={{
+                <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-30 transition-opacity duration-700" style={{
                   background: 'linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%)',
                   transform: 'translateX(-100%)',
                   animation: 'shimmer 3s ease-in-out infinite'
@@ -395,7 +395,7 @@ const Skills = () => {
               </div>
 
               {/* 3D Shadow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 blur-2xl rounded-4xl transform translate-y-6 translate-x-3 -z-10 group-hover:translate-y-10 group-hover:translate-x-6 group-hover:opacity-60 transition-all duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 blur-2xl rounded-[2rem] transform translate-y-6 translate-x-3 -z-10 group-hover:translate-y-10 group-hover:translate-x-6 group-hover:opacity-60 transition-all duration-700"></div>
             </div>
           </div>
         </div>

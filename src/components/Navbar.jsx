@@ -16,6 +16,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
   const navItems = [
     { name: 'Home', page: 'home', icon: Home },
     { name: 'My Skills', page: 'skills', icon: Code },
+    { name: 'My Projects', page: 'projects', icon: Briefcase },
   ]
 
   const handleNavClick = (page) => {
