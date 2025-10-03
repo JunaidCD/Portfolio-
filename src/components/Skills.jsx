@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Code, Zap, Palette, Database, Globe, Wrench, Sparkles, Star, Cpu, Shield } from 'lucide-react'
 
-const Skills = () => {
+const Skills = ({ setCurrentPage }) => {
   const [hoveredCategory, setHoveredCategory] = useState(null)
 
   const skillCategories = [
@@ -355,7 +355,10 @@ const Skills = () => {
 
                   {/* Enhanced Button */}
                   <div className="relative">
-                    <button className="group/btn relative px-12 py-6 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.5rem] font-bold text-white text-xl shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-3 transition-all duration-500 overflow-hidden">
+                    <button 
+                      onClick={() => setCurrentPage('contact')}
+                      className="group/btn relative px-12 py-6 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.5rem] font-bold text-white text-xl shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-3 transition-all duration-500 overflow-hidden"
+                    >
                       {/* Button Glow Effects */}
                       <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></div>
                       <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>

@@ -252,8 +252,11 @@ const Achievements = () => {
                     Access all certificates, awards, and detailed documentation
                   </p>
                   
-                  {/* Static Button */}
-                  <button className="group/btn relative px-12 py-6 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.5rem] font-bold text-white text-xl shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-3 transition-all duration-500 overflow-hidden cursor-not-allowed opacity-75">
+                  {/* Active Button */}
+                  <button 
+                    onClick={() => window.open('https://drive.google.com/drive/folders/1m8zcciOoGQmo_aZ2wSZp-WW2ouVhXiUI?usp=drive_link', '_blank')}
+                    className="group/btn relative px-12 py-6 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-[1.5rem] font-bold text-white text-xl shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-3 transition-all duration-500 overflow-hidden"
+                  >
                     {/* Button Glow Effects */}
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></div>
                     
@@ -263,11 +266,6 @@ const Achievements = () => {
                       <span>Access All Documents</span>
                       <Sparkles className="w-6 h-6 group-hover/btn:rotate-180 group-hover/btn:scale-110 transition-all duration-500" />
                     </span>
-
-                    {/* Coming Soon Badge */}
-                    <div className="absolute top-2 right-2 text-xs bg-slate-700 text-slate-300 px-3 py-1 rounded-full border border-white/20">
-                      Link Coming Soon
-                    </div>
                   </button>
                 </div>
 

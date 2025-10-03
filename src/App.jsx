@@ -14,7 +14,7 @@ function App() {
       case 'home':
         return <Hero setCurrentPage={setCurrentPage} />
       case 'skills':
-        return <Skills />
+        return <Skills setCurrentPage={setCurrentPage} />
       case 'projects':
         return <Projects />
       case 'achievements':
