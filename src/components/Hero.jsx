@@ -1,7 +1,7 @@
 import React from 'react'
-import { ChevronDown, Github, Linkedin, Mail, Download, Sparkles, Code, Zap } from 'lucide-react'
+import { ChevronDown, Github, Linkedin, Mail, Download, Sparkles, Code, Zap, Eye } from 'lucide-react'
 
-const Hero = () => {
+const Hero = ({ setCurrentPage }) => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-32">
@@ -111,7 +111,10 @@ const Hero = () => {
 
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up mb-16" style={{animationDelay: '0.7s'}}>
-            <button className="group relative px-10 py-5 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-2xl font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+            <button 
+              onClick={() => setCurrentPage('projects')}
+              className="group relative px-10 py-5 bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 rounded-2xl font-bold text-white shadow-2xl hover:shadow-primary-500/50 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+            >
               {/* Button Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
               
@@ -124,7 +127,10 @@ const Hero = () => {
                 <ChevronDown className="w-6 h-6 group-hover:translate-y-2 group-hover:animate-bounce transition-all duration-300" />
               </span>
             </button>
-            <button className="group relative px-8 py-4 glass rounded-2xl font-bold text-white border-2 border-white/30 hover:border-primary-400/80 backdrop-blur-xl hover:bg-gradient-to-r hover:from-primary-500/20 hover:via-accent-500/20 hover:to-purple-500/20 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden active:bg-gradient-to-r active:from-primary-500 active:via-accent-500 active:to-purple-500 active:border-accent-400 active:shadow-2xl active:shadow-primary-500/50">
+            <button 
+              onClick={() => window.open('https://drive.google.com/drive/folders/1PDaWCo8aNnuvS58Yi-mWW8d6fDJPIn74?usp=sharing', '_blank')}
+              className="group relative px-8 py-4 glass rounded-2xl font-bold text-white border-2 border-white/30 hover:border-primary-400/80 backdrop-blur-xl hover:bg-gradient-to-r hover:from-primary-500/20 hover:via-accent-500/20 hover:to-purple-500/20 transform hover:scale-110 hover:-translate-y-2 transition-all duration-500 overflow-hidden active:bg-gradient-to-r active:from-primary-500 active:via-accent-500 active:to-purple-500 active:border-accent-400 active:shadow-2xl active:shadow-primary-500/50"
+            >
               {/* Colorful Click Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 via-accent-400 to-purple-500 opacity-0 group-hover:opacity-30 group-active:opacity-100 transition-all duration-300 blur-sm"></div>
               
@@ -132,8 +138,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-red-400 via-yellow-400 via-green-400 via-blue-400 via-indigo-400 to-purple-400 opacity-0 group-active:opacity-50 rounded-2xl transition-all duration-500 animate-pulse"></div>
               
               <span className="relative flex items-center space-x-3 group-active:text-white group-active:drop-shadow-lg">
-                <Download className="w-6 h-6 group-hover:animate-bounce group-active:animate-spin group-active:text-yellow-300 transition-all duration-300" />
-                <span className="group-active:bg-gradient-to-r group-active:from-yellow-300 group-active:via-pink-300 group-active:to-purple-300 group-active:bg-clip-text group-active:text-transparent transition-all duration-300">Download Resume</span>
+                <Eye className="w-6 h-6 group-hover:animate-bounce group-active:animate-spin group-active:text-yellow-300 transition-all duration-300" />
+                <span className="group-active:bg-gradient-to-r group-active:from-yellow-300 group-active:via-pink-300 group-active:to-purple-300 group-active:bg-clip-text group-active:text-transparent transition-all duration-300">View Resume</span>
               </span>
             </button>
           </div>
@@ -141,27 +147,48 @@ const Hero = () => {
           {/* Enhanced Social Links */}
           <div className="flex justify-center space-x-8 animate-slide-up mt-4 mb-32" style={{animationDelay: '0.9s'}}>
             {[
-              { icon: Github, href: '#', label: 'GitHub', color: 'hover:bg-gray-600' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:bg-blue-600' },
-              { icon: Mail, href: '#contact', label: 'Email', color: 'hover:bg-red-600' }
+              { icon: Github, href: 'https://github.com/JunaidCD', label: 'GitHub', color: 'hover:bg-gray-600', isExternal: true },
+              { icon: Linkedin, href: 'https://linkedin.com/in/junaid-mollah-a59150319', label: 'LinkedIn', color: 'hover:bg-blue-600', isExternal: true },
+              { icon: Mail, href: '#contact', label: 'Email', color: 'hover:bg-red-600', isExternal: false, page: 'contact' }
             ].map((social, index) => (
-              <a
-                key={social.label}
-                href={social.href}
-                className={`group relative p-4 glass rounded-2xl border border-white/20 hover:border-white/50 transition-all duration-500 transform hover:scale-125 hover:-translate-y-3 ${social.color} hover:shadow-2xl`}
-                aria-label={social.label}
-                style={{animationDelay: `${0.1 * index}s`}}
-              >
-                {/* Icon Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
-                
-                <social.icon className="relative w-7 h-7 text-slate-300 group-hover:text-white group-hover:rotate-12 transition-all duration-300" />
-                
-                {/* Tooltip */}
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  {social.label}
-                </div>
-              </a>
+              social.isExternal ? (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group relative p-4 glass rounded-2xl border border-white/20 hover:border-white/50 transition-all duration-500 transform hover:scale-125 hover:-translate-y-3 ${social.color} hover:shadow-2xl`}
+                  aria-label={social.label}
+                  style={{animationDelay: `${0.1 * index}s`}}
+                >
+                  {/* Icon Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
+                  
+                  <social.icon className="relative w-7 h-7 text-slate-300 group-hover:text-white group-hover:rotate-12 transition-all duration-300" />
+                  
+                  {/* Tooltip */}
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    {social.label}
+                  </div>
+                </a>
+              ) : (
+                <button
+                  key={social.label}
+                  onClick={() => setCurrentPage(social.page)}
+                  className={`group relative p-4 glass rounded-2xl border border-white/20 hover:border-white/50 transition-all duration-500 transform hover:scale-125 hover:-translate-y-3 ${social.color} hover:shadow-2xl`}
+                  aria-label={social.label}
+                  style={{animationDelay: `${0.1 * index}s`}}
+                >
+                  {/* Icon Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
+                  
+                  <social.icon className="relative w-7 h-7 text-slate-300 group-hover:text-white group-hover:rotate-12 transition-all duration-300" />
+                  
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    {social.label}
+                  </div>
+                </button>
+              )
             ))}
           </div>
         </div>

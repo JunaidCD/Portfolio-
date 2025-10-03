@@ -12,7 +12,7 @@ function App() {
   const renderPage = () => {
     switch(currentPage) {
       case 'home':
-        return <Hero />
+        return <Hero setCurrentPage={setCurrentPage} />
       case 'skills':
         return <Skills />
       case 'projects':
@@ -22,7 +22,7 @@ function App() {
       case 'contact':
         return <Contact />
       default:
-        return <Hero />
+        return <Hero setCurrentPage={setCurrentPage} />
     }
   }
 
