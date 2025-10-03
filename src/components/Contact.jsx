@@ -84,12 +84,12 @@ const Contact = () => {
       
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
-      alert('✅ Message sent successfully! I\'ll get back to you soon.')
+      alert('Message sent successfully! I\'ll get back to you soon.')
       
     } catch (error) {
       console.error('EmailJS Error:', error)
       setSubmitStatus('error')
-      alert('❌ Failed to send message. Please try again or contact me directly at junaidmollah17@gmail.com')
+      alert('Failed to send message. Please try again or contact me directly at junaidmollah17@gmail.com')
     } finally {
       setIsSubmitting(false)
     }
@@ -118,7 +118,7 @@ const Contact = () => {
     {
       icon: Github,
       name: 'GitHub',
-      url: '#',
+      url: 'https://github.com/JunaidCD',
       color: 'from-gray-600 to-slate-700',
       glowColor: 'shadow-gray-600/50',
       hoverColor: 'hover:shadow-gray-500/50'
@@ -126,7 +126,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: '#',
+      url: 'https://linkedin.com/in/junaid-mollah-a59150319',
       color: 'from-blue-500 to-blue-600',
       glowColor: 'shadow-blue-500/50',
       hoverColor: 'hover:shadow-blue-500/50'
@@ -134,7 +134,7 @@ const Contact = () => {
     {
       icon: X,
       name: 'X',
-      url: '#',
+      url: 'https://x.com/JunaidMollah5',
       color: 'from-slate-800 to-black',
       glowColor: 'shadow-slate-700/50',
       hoverColor: 'hover:shadow-white/30'
@@ -287,7 +287,8 @@ const Contact = () => {
                 {socialLinks.map((social, index) => (
                   <div
                     key={social.name}
-                    className="group relative perspective-1000 animate-slide-up"
+                    onClick={() => window.open(social.url, '_blank')}
+                    className="group relative perspective-1000 animate-slide-up cursor-pointer"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className={`relative transform-gpu transition-all duration-700 hover:scale-125 hover:-translate-y-4 ${social.glowColor} ${social.hoverColor} hover:shadow-2xl`}>
