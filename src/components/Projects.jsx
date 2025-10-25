@@ -35,6 +35,16 @@ const Projects = () => {
       icon: Globe,
       demoUrl: 'https://youtu.be/Lkze7fc2L20',
       codeUrl: 'https://github.com/JunaidCD/D-App'
+    },
+    {
+      title: 'AyurHerb – Blockchain-Powered Ayurvedic Supply Chain Management',
+      description: 'Comprehensive blockchain-powered supply chain management system for Ayurvedic herbs and medicines. Features role-based access control, immutable herb collection tracking, processing verification, lab testing integration, and complete transparency from collection to consumer delivery using Ethereum blockchain technology.',
+      techStack: ['React.js', 'Node.js', 'Express.js', 'Solidity', 'Hardhat', 'Ethers.js', 'TailwindCSS', 'MetaMask'],
+      color: 'from-emerald-500 to-green-600',
+      glowColor: 'shadow-emerald-500/50',
+      icon: Leaf,
+      demoUrl: 'http://ayurherb.netlify.app',
+      codeUrl: 'https://github.com/JunaidCD/AyurherbX'
     }
   ]
 
