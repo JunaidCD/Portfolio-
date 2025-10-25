@@ -40,8 +40,8 @@ const Projects = () => {
       title: 'AyurHerb – Blockchain-Powered Ayurvedic Supply Chain Management',
       description: 'Comprehensive blockchain-powered supply chain management system for Ayurvedic herbs and medicines. Features role-based access control, immutable herb collection tracking, processing verification, lab testing integration, and complete transparency from collection to consumer delivery using Ethereum blockchain technology.',
       techStack: ['React.js', 'Node.js', 'Express.js', 'Solidity', 'Hardhat', 'Ethers.js', 'TailwindCSS', 'MetaMask'],
-      color: 'from-emerald-500 to-green-600',
-      glowColor: 'shadow-emerald-500/50',
+      color: 'from-amber-500 to-orange-600',
+      glowColor: 'shadow-amber-500/50',
       icon: Leaf,
       demoUrl: 'http://ayurherb.netlify.app',
       codeUrl: 'https://github.com/JunaidCD/AyurherbX'
@@ -345,7 +345,7 @@ const Projects = () => {
                           
                           <span className="relative flex items-center justify-center space-x-3">
                             <Play className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" />
-                            <span>Demo Video</span>
+                            <span>Deployment Link</span>
                           </span>
                         </button>
                         
@@ -508,7 +508,7 @@ const Projects = () => {
                           
                           <span className="relative flex items-center justify-center space-x-3">
                             <Play className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" />
-                            <span>Demo Video</span>
+                            <span>Deployment Link</span>
                           </span>
                         </button>
                         
