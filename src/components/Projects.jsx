@@ -345,7 +345,7 @@ const Projects = () => {
                           
                           <span className="relative flex items-center justify-center space-x-3">
                             <Play className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" />
-                            <span>Deployment Link</span>
+                            <span>{project.title.includes('AyurHerb') ? 'Deployment Link' : 'Demo Video'}</span>
                           </span>
                         </button>
                         
@@ -508,7 +508,7 @@ const Projects = () => {
                           
                           <span className="relative flex items-center justify-center space-x-3">
                             <Play className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" />
-                            <span>Deployment Link</span>
+                            <span>Demo Video</span>
                           </span>
                         </button>
                         
