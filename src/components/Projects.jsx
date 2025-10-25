@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Play, Github, Sparkles, Star, Code, Zap, Shield, Globe, Leaf, Brain, Eye, Award, Rocket, Calendar } from 'lucide-react'
+import { Play, Github, Sparkles, Star, Code, Zap, Shield, Globe, Leaf, Brain, Eye, Award, Rocket, Calendar, ExternalLink } from 'lucide-react'
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null)
@@ -344,7 +344,10 @@ const Projects = () => {
                           <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-xl"></div>
                           
                           <span className="relative flex items-center justify-center space-x-3">
-                            <Play className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" />
+                            {project.title.includes('AyurHerb') ? 
+                              <ExternalLink className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" /> :
+                              <Play className="w-6 h-6 group-hover/btn:scale-125 transition-transform duration-500" />
+                            }
                             <span>{project.title.includes('AyurHerb') ? 'Deployment Link' : 'Demo Video'}</span>
                           </span>
                         </button>
